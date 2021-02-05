@@ -92,4 +92,3 @@ function generatePassword() {
     //} if (upperCase === true {
     //     password += char.toLowerCase();
     // })
-
