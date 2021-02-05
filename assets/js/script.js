@@ -4,7 +4,7 @@ var generateBtn = document.querySelector("#generate");
 var upperCaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lowerCaseLetters = "abcdefghijklmnopqrstuwxyz";
 var numberCharacters = "12345678990";
-var specialCharacters = "!@#$%^&*()-_";
+var specialCharacters = "!@#$%^&*()-_{}|[]:;<>,.+=";
 
 // Write password to the #password input
 function writePassword() {
@@ -76,19 +76,4 @@ function generatePassword() {
   passwordText.value = password;
 
 }
-//need an array of characters to pull from
-//need prompts for:
-  //uppercase characters
-  //lowercase characters
-  //special chracters
-  //numbers
-  //length (at least 8 max 128)
 
-
-  //make variable with array of characters
-  //window.prompt asking for parameters
-    // if (lowerCase === true) {
-    //  passWord += char.toLowerCase();
-    //} if (upperCase === true {
-    //     password += char.toLowerCase();
-    // })
