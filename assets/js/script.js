@@ -37,24 +37,34 @@ function writePassword() {
 
       var numbersQuestion = confirm("Would you like numbers?");
       console.log(numbersQuestion);
+
       if (!lowerCaseQuestion && !upperCaseQuestion && !specialCharactersQuestion && !numbersQuestion) {
+
         alert("You must select at least 1 set of characters.");
         return "You must select at least 1 set of characters.";
+
       } else {
+        
         var password = "";
 
         if (lowerCaseQuestion) {
           passwordArray += lowerCaseLetters;
+
         }
         if (upperCaseQuestion) {
           passwordArray += upperCaseLetters;
+
         }
         if (specialCharactersQuestion) {
           passwordArray += specialCharacters;
+
         }
         if (numbersQuestion) {
           passwordArray += numberCharacters;
+          
         }
+          console.log(passwordArray);
+
         for (var i = 0; i < passwordLength; i++) {
           var num = Math.floor(Math.random() * passwordArray.length);
           password += passwordArray[num];
