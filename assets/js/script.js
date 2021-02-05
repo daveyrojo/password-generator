@@ -5,12 +5,12 @@ var upperCaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lowerCaseLetters = "abcdefghijklmnopqrstuwxyz";
 var numberCharacters = "12345678990";
 var specialCharacters = "!@#$%^&*()-_{}|[]:;<>,.+=";
+var passwordLength = 0;
+var passwordArray = [];
 
 // Write password to the #password input
 function writePassword() {
 
-  var passwordLength = 0;
-  var passwordArray = [];
 
   var passwordPrompt = confirm("Would you like to make a password?"); {
     console.log(passwordPrompt);
@@ -27,24 +27,26 @@ function writePassword() {
       console.log(passwordLength);
 
       var lowerCaseQuestion = confirm("Would you like lower case characters?");
-      console.log(lowerCaseQuestion);
+      console.log(lowerCaseQuestion); 
+   
 
       var upperCaseQuestion = confirm("Would you like upper case characters?");
       console.log(upperCaseQuestion);
-
+    
       var specialCharactersQuestion = confirm("Would you like special characters? ");
       console.log(specialCharactersQuestion);
 
       var numbersQuestion = confirm("Would you like numbers?");
       console.log(numbersQuestion);
+   
 
       if (!lowerCaseQuestion && !upperCaseQuestion && !specialCharactersQuestion && !numbersQuestion) {
 
         alert("You must select at least 1 set of characters.");
         return "You must select at least 1 set of characters.";
-
+ 
       } else {
-        
+
         var password = "";
 
         if (lowerCaseQuestion) {
@@ -61,9 +63,9 @@ function writePassword() {
         }
         if (numbersQuestion) {
           passwordArray += numberCharacters;
-          
+
         }
-          console.log(passwordArray);
+        console.log(passwordArray);
 
         for (var i = 0; i < passwordLength; i++) {
           var num = Math.floor(Math.random() * passwordArray.length);
